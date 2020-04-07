@@ -1,0 +1,18 @@
+
+kc_library.cloudinary:
+  path: 'kc_library/cloudinary/search'
+  defaults:
+    _controller: '\Drupal\kc_library\Controller\CloudinaryController::search'
+  requirements:
+    _role: 'authenticated'
+  options:
+    no_cache: TRUE
+
+kc_library.kaltura:
+  path: 'kc_library/kaltura/search'
+  defaults:
+    _controller: '\Drupal\kc_library\Controller\KalturaController::search'
+  requirements:
+    _role: 'authenticated'
+  options:
+    no_cache: TRUE

@@ -1,0 +1,114 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e34b6c3a30a094c5a5cf81069dcbbed4",
+    "packages": [
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "e33619e48ea8fa0350c007d640777091bfa4fdbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/e33619e48ea8fa0350c007d640777091bfa4fdbc",
+                "reference": "e33619e48ea8fa0350c007d640777091bfa4fdbc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2019-11-28T15:57:33+00:00"
+        },
+        {
+            "name": "kaltura/api-client-library",
+            "version": "v15.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaltura/KalturaGeneratedAPIClientsPHP53.git",
+                "reference": "bed6bcd673f27a51ea3151e4d5f277b88200be03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaltura/KalturaGeneratedAPIClientsPHP53/zipball/bed6bcd673f27a51ea3151e4d5f277b88200be03",
+                "reference": "bed6bcd673f27a51ea3151e4d5f277b88200be03",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kaltura": "library"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kaltura",
+                    "homepage": "http://www.kaltura.org/"
+                }
+            ],
+            "description": "An auto generated Composer package for the Kaltura API client library",
+            "keywords": [
+                "api",
+                "client library",
+                "kaltura",
+                "open source video",
+                "video",
+                "video platform"
+            ],
+            "time": "2020-03-31T10:33:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

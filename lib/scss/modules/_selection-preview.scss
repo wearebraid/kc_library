@@ -1,0 +1,49 @@
+.kc-selection-preview {
+  &-container {
+    position: relative;
+  }
+
+  &-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1px;
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &-remove-button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: #6b6b6b;
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+
+    path {
+      fill: #fff;
+    }
+
+    svg {
+      display: block;
+      width: 14px !important;
+      height: 14px !important;
+    }
+  }
+
+  &-title {
+    font-size: 10px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+    margin: 0px;
+    padding: 4px;
+    padding-bottom: 0px;
+  }
+
+}

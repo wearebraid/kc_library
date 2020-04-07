@@ -1,0 +1,5 @@
+services:
+  kc_library.typed_data:
+    class: Drupal\kc_library\Normalizer\KCLibraryItemNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }

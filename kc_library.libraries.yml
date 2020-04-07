@@ -1,0 +1,6 @@
+media:
+  js:
+    dist/js/app.min.js: { preprocess: false }
+  css:
+    state:
+      dist/css/style.css: { preprocess: false }

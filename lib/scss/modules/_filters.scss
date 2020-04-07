@@ -1,0 +1,25 @@
+.kc-filters {
+  &-form {
+    @media screen and (min-width: $l) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &-field.form-item {
+    @media screen and (min-width: $l) {
+      margin-right: 8px;
+    }
+    &:last-child {
+      @media screen and (min-width: $l) {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &-submit-button-container.form-item {
+    @media screen and (min-width: $l) {
+      margin-left: auto;
+    }
+  }
+}

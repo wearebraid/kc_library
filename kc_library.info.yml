@@ -1,0 +1,7 @@
+name: Kaltura Cloudinary Library
+type: module
+description: Adds a media module that sources content from Cloudinary and Kaltura accounts
+package: Field types
+dependencies:
+  - text
+core_version_requirement: '^8.8'

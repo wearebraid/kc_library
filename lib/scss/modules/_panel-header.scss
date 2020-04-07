@@ -1,0 +1,36 @@
+.kc-panel-header {
+  &-container {
+    padding: 15px 15px 15px 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #6b6b6b;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  &-dialog-title {
+    color: #fff;
+    font-size: 1.231em;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &-close-button {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    transition: all 0.1s;
+    cursor: pointer;
+    &:hover {
+      border-color: #fff;
+    }
+  }
+}

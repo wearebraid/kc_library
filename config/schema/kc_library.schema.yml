@@ -1,0 +1,10 @@
+field.field_settings.kc_library:
+  type: mapping
+  label: 'Kaltura Cloudinary Library Settings'
+  mapping:
+    selection_limit:
+      type: integer
+      label: 'Selection Limit'
+    media_type:
+      type: text
+      label: 'Allowed Media Type'

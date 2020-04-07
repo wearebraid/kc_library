@@ -1,0 +1,36 @@
+.kc-lib-preview {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin: -4px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-top: 8px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  li {
+    display: block;
+    padding: 4px;
+    width: 20%;
+    @media screen and (min-width: $l) {
+      width: calc(100%/8);
+    }
+  }
+
+  li > div {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+}

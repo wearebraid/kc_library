@@ -1,0 +1,23 @@
+.kc-selection {
+  &-container {
+    display: none;
+    @media screen and (min-width: $l) {
+      display: block;
+    }
+  }
+
+  &-items {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+  }
+
+  &-item {
+    width: 48px;
+    margin-right: 4px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
