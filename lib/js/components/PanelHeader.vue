@@ -8,7 +8,7 @@
       role="button"
       class="kc-panel-header-close-button"
     >
-      <img src="/modules/custom/kc_library/lib/icons/ex.svg" alt="Close Panel">
+      <img src="/modules/contrib/kc_library/lib/icons/ex.svg" alt="Close Panel">
     </a>
   </header>
 </template>

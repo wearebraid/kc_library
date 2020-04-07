@@ -8,10 +8,11 @@
         class="kc-panel-prompt-option"
       >
         <div class="kc-panel-prompt-icon-container">
-          <i
-            class="fas kc-panel-prompt-icon"
-            :class="`fa-${option.icon}`"
-          ></i>
+          <img
+            class="kc-panel-prompt-icon"
+            :src="`/modules/contrib/kc_library/lib/icons/${option.icon}.svg`"
+            alt=""
+          >
         </div>
         <button
           @click="handleClick(key)"
