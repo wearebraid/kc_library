@@ -1,5 +1,5 @@
 
-kc_library.cloudinary:
+kc_library.cloudinary.search:
   path: 'kc_library/cloudinary/search'
   defaults:
     _controller: '\Drupal\kc_library\Controller\CloudinaryController::search'
@@ -8,7 +8,17 @@ kc_library.cloudinary:
   options:
     no_cache: TRUE
 
-kc_library.kaltura:
+kc_library.cloudinary.upload:
+  path: 'kc_library/cloudinary/upload'
+  defaults:
+    _controller: '\Drupal\kc_library\Controller\CloudinaryController::upload'
+  requirements:
+    _role: 'authenticated'
+    _methods: 'POST'
+  options:
+    no_cache: TRUE
+
+kc_library.kaltura.search:
   path: 'kc_library/kaltura/search'
   defaults:
     _controller: '\Drupal\kc_library\Controller\KalturaController::search'

@@ -31,4 +31,20 @@ class CloudinaryController extends ControllerBase {
     return new JsonResponse($response);
   }
 
+  /**
+   * Upload.
+   */
+  public function upload(Request $request) {
+    $params = json_decode($request->getContent(), TRUE);
+    $handler = new CloudinaryHandler(
+      getenv('CLOUDINARY_NAME'),
+      getenv('CLOUDINARY_API_KEY'),
+      getenv('CLOUDINARY_API_SECRET')
+    );
+    $preset = getenv('CLOUDINARY_UPLOAD_PRESET');
+    $folder = getenv('CLOUDINARY_UPLOAD_FOLDER');
+    $response = $handler->upload($params, $preset, $folder);
+    return new JsonResponse($response);
+  }
+
 }

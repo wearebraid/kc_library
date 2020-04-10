@@ -366,4 +366,24 @@
 .kc-load-more-results {
   margin-left: auto; }
 
+.kc-upload-panel-form-wrapper {
+  padding: 16px;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  background: #fcfcfa; }
+
+.kc-upload-panel-tags {
+  max-width: 296px;
+  width: 100%; }
+
+.kc-upload-panel-description {
+  max-width: 296px;
+  width: 100%; }
+
+.kc-upload-panel-submit-button.button {
+  margin-left: 0px; }
+
+.kc-upload-panel-field {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=style.css.map */

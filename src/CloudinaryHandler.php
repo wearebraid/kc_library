@@ -3,6 +3,8 @@
 namespace Drupal\kc_library;
 
 use Cloudinary\Search as Search;
+use Cloudinary\Uploader as Uploader;
+use Drupal\Component\Utility\Random;
 
 /**
  * Cloudinary API Handler.
@@ -36,6 +38,12 @@ class CloudinaryHandler {
     $this->cloudName = $cloudName;
     $this->apiKey = $apiKey;
     $this->apiSecret = $apiSecret;
+    \Cloudinary::config([
+      'cloud_name' => $this->cloudName,
+      'api_key' => $this->apiKey,
+      'api_secret' => $this->apiSecret,
+      'secure' => TRUE,
+    ]);
   }
 
   /**
@@ -70,12 +78,6 @@ class CloudinaryHandler {
    * {@inheritdoc}
    */
   public function search($query) {
-    \Cloudinary::config([
-      'cloud_name' => $this->cloudName,
-      'api_key' => $this->apiKey,
-      'api_secret' => $this->apiSecret,
-      'secure' => TRUE,
-    ]);
     $args = $this->buildArgs($query);
     $search = new Search();
     $search->with_field('image_metadata');
@@ -88,6 +90,44 @@ class CloudinaryHandler {
       $search->max_results($maxResults);
     }
     return $search->execute();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  private function getUniqueImageName($name) {
+    preg_match('/^(.+)\.(.+)$/', $name, $match);
+    if (!empty($match[1])) {
+      $name = $match[1];
+    }
+    $random = new Random();
+    return $name . '_' . $random->name();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function upload($params, $preset = NULL, $folder = NULL) {
+    $options = [];
+    $name = $params['file_name'];
+    if (!empty($params['title'])) {
+      $name = $params['title'];
+      $options['context']['caption'] = $params['title'];
+    }
+    $options['public_id'] = $this->getUniqueImageName($name);
+    if (!empty($params['description'])) {
+      $options['context']['alt'] = $params['description'];
+    }
+    if (!empty($params['tags'])) {
+      $options['tags'] = explode(',', str_replace(', ', ',', $params['tags']));
+    }
+    if (!empty($preset)) {
+      $options['upload_preset'] = $preset;
+    }
+    if (!empty($folder)) {
+      $options['folder'] = $folder;
+    }
+    return Uploader::upload($params['content'], $options);
   }
 
 }
