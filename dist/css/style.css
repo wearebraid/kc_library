@@ -367,6 +367,7 @@
   margin-left: auto; }
 
 .kc-upload-panel-form-wrapper {
+  position: relative;
   padding: 16px;
   border: 1px solid #bfbfbf;
   border-radius: 2px;
@@ -385,5 +386,13 @@
 
 .kc-upload-panel-field {
   margin-bottom: 10px; }
+
+.kc-upload-panel-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px; }
+
+.kc-upload-panel-heading {
+  margin-right: 32px; }
 
 /*# sourceMappingURL=style.css.map */

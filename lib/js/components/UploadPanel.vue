@@ -1,11 +1,30 @@
 <template>
   <div class="kc-upload-panel-container">
+    <button
+      v-if="!panelIsExpanded"
+      @click="panelIsExpanded = true"
+      class="link"
+    >
+      Upload to Cloudinary
+    </button>
     <form
+      v-else
       @submit.prevent="handleSubmit"
       class="kc-upload-panel-form"
     >
       <div class="kc-upload-panel-form-wrapper">
-        <h4>Upload to Cloudinary</h4>
+        <a
+          @click="panelIsExpanded = false"
+          class="kc-upload-panel-close-button link"
+        >
+          <img
+            src="/modules/contrib/kc_library/lib/icons/ex-dark.svg"
+            alt="Close Upload Panel"
+          >
+        </a>
+        <h4 class="kc-upload-panel-heading">
+          Upload to Cloudinary
+        </h4>
         <error-message
           v-if="errorMessage"
           :message="errorMessage"
@@ -92,7 +111,8 @@ export default {
   data () {
     return {
       isLoading: false,
-      errorMessage: ''
+      errorMessage: '',
+      panelIsExpanded: false
     }
   },
   methods: {
